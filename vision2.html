@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL Projetos e Construções - Estratégia de Produto</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            color: #1a202c;
+            line-height: 1.5;
+        }
+        
+        .slide-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .slide {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 40px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slide h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1a365d;
+            border-bottom: 3px solid #3182CE;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .slide h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: #2c5282;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 30px;
+            margin: 24px 0;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        .icon-box {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .icon {
+            background-color: #3182CE;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .highlight-section {
+            background-color: #f0f7ff;
+            border-left: 4px solid #3182CE;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .metric-boxes {
+            display: flex;
+            gap: 20px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+        }
+        
+        .metric-box {
+            background-color: #ebf8ff;
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1;
+            min-width: 200px;
+            border-bottom: 3px solid #3182CE;
+        }
+        
+        .metric-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2b6cb0;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        .roadmap {
+            position: relative;
+            padding: 30px 0;
+            margin: 40px 0;
+        }
+        
+        .roadmap-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 18px;
+            width: 4px;
+            background-color: #e2e8f0;
+            z-index: 1;
+        }
+        
+        .roadmap-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 24px;
+            z-index: 2;
+        }
+        
+        .roadmap-dot {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: #3182CE;
+            border-radius: 50%;
+        }
+        
+        .roadmap-stage {
+            font-weight: 700;
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+        
+        .roadmap-desc {
+            font-size: 15px;
+            color: #4a5568;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .slide {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1: MVP Zero Fricção -->
+        <div class="slide" id="slide1">
+            <h1>MVP Zero Fricção: Valor antes de Identidade</h1>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h2>Estratégia de MVP - Analogia Loggi</h2>
+                    <div class="icon-box">
+                        <div class="icon">1</div>
+                        <div>
+                            <h3>Web-first sem cadastro obrigatório</h3>
+                            <p>Entregar valor tangível antes de solicitar dados do usuário, reduzindo fricção inicial - similar à estratégia da Loggi de permitir consulta do FAQ sem login</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">2</div>
+                        <div>
+                            <h3>QR Codes + WhatsApp como canal</h3>
+                            <p>Simplificar entrada utilizando canais já familiares aos usuários - lembrando a abordagem da Loggi de autoserviço e comunicação em canais de alta adoção</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">3</div>
+                        <div>
+                            <h3>Problem Discovery Loop</h3>
+                            <p>Ciclo contínuo de validação de dores com early adopters, semelhante à prática da Loggi de metrificar interações de suporte para direcionar melhorias</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2>Métricas de Sucesso - Foco Quantitativo</h2>
+                    <div class="metric-boxes">
+                        <div class="metric-box">
+                            <div class="metric-number">300+</div>
+                            <div class="metric-label">Scans de QR code nos primeiros 30 dias</div>
+                        </div>
+                        
+                        <div class="metric-box">
+                            <div class="metric-number">30%</div>
+                            <div class="metric-label">Taxa de conversão lead-to-orçamento</div>
+                        </div>
+                        
+                        <div class="metric-box">
+                            <div class="metric-number">&lt;5min</div>
+                            <div class="metric-label">Tempo médio de emissão de orçamento</div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-section">
+                        <h3>MVPs em Ondas Incrementais</h3>
+                        <p>Seguindo a lógica da Loggi de comunicação 2.0, cada evolução do MVP adiciona valor sem aumentar a complexidade inicial:</p>
+                        <ul>
+                            <li><strong>MVP inicial:</strong> QR Codes + Orçamentos + WhatsApp</li>
+                            <li><strong>MVP+30:</strong> Cadastros light + fotos + histórico básico</li>
+                            <li><strong>MVP+60:</strong> Dashboard básico + aprovações digitais</li>
+                            <li><strong>MVP+90:</strong> Pagamentos digitais + agenda técnicos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div>DL Projetos e Construções</div>
+                <div>Confidencial</div>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Backlog Priorizado -->
+        <div class="slide" id="slide2">
+            <h1>Backlog Priorizado: Do MVP ao Product-Market Fit</h1>
+            
+            <div class="roadmap">
+                <div class="roadmap-line"></div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-stage">Q2 2025: MVP Zero Fricção</div>
+                    <div class="roadmap-desc">QR codes + orçamentos automáticos + formulário de contato + status via WhatsApp</div>
+                </div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-stage">Q3 2025: Product-Market Fit</div>
+                    <div class="roadmap-desc">Dashboard cliente + cadastro progressivo + aprovações digitais + gestão de equipes</div>
+                </div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-stage">Q4 2025: Scale-up</div>
+                    <div class="roadmap-desc">Financeiro completo + NF-e integrada + marketplace de fornecedores + split payments</div>
+                </div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-stage">Q1 2026: Inovação Avançada</div>
+                    <div class="roadmap-desc">IoT + sensores low-cost + manutenção preditiva + dashboard BI + integração BIM</div>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h2>Gatilhos para Priorização</h2>
+                    <div class="icon-box">
+                        <div class="icon">A</div>
+                        <div>
+                            <h3>Esforço em Suporte</h3>
+                            <p>Similar à Loggi, monitorar tickets recorrentes para automatizar soluções - reduzir 80% das dúvidas frequentes via melhorias de produto</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">B</div>
+                        <div>
+                            <h3>Engagement Metrics</h3>
+                            <p>Priorizar features com maior impacto no retorno dos usuários e taxa de conclusão da jornada principal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">C</div>
+                        <div>
+                            <h3>PMF Thresholds</h3>
+                            <p>Definir métricas claras para medir PMF: 40%+ usuários retornando em 30 dias, NPS > 40, CAC recuperado em menos de 3 meses</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2>Data-Driven Iterations</h2>
+                    <div class="highlight-section">
+                        <h3>Ciclo de Feedback Contínuo</h3>
+                        <p>Assim como a Loggi melhora sua central de suporte e FAQs, cada iteração do produto será guiada por:</p>
+                        <ul>
+                            <li>Entrevistas semanais com 3-5 usuários após cada interação completa</li>
+                            <li>Análise de funil de conversão por semana</li>
+                            <li>Pesquisas NPS após conclusão de cada etapa do serviço</li>
+                            <li>Medição de impacto na redução de tickets e tempo de resolução</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">D</div>
+                        <div>
+                            <h3>Quick Wins vs. Features Estruturantes</h3>
+                            <p>Balancear desenvolvimento de melhorias rápidas de UX com investimentos em infraestrutura tecnológica de longo prazo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div>DL Projetos e Construções</div>
+                <div>Confidencial</div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Visão de Produto de Ponta a Ponta -->
+        <div class="slide" id="slide3">
+            <h1>Visão de Produto de Ponta a Ponta: Building OS</h1>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h2>Estratégia de Plataforma - Aprendizados Loggi</h2>
+                    <div class="icon-box">
+                        <div class="icon">1</div>
+                        <div>
+                            <h3>Self-Service vs. Humanizado</h3>
+                            <p>Similar à estratégia da Loggi, criar jornadas de autoatendimento para operações de rotina, preservando contato humano para momentos críticos e de alto valor</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">2</div>
+                        <div>
+                            <h3>Multicanal Integrado</h3>
+                            <p>Criar experiência fluida entre app, web, WhatsApp e sensores IoT, com dados centralizados e comunicação consistente em todos os touchpoints</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-box">
+                        <div class="icon">3</div>
+                        <div>
+                            <h3>Modelo de Monetização Evolutivo</h3>
+                            <p>Iniciar com modelo transacional e migrar para SaaS + marketplace à medida que o valor percebido aumenta</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2>North Star: O Sistema Operacional para Edificações</h2>
+                    <div class="highlight-section">
+                        <h3>Visão 2026+</h3>
+                        <p>A plataforma DL evoluirá do gerenciamento de manutenções reativas para o primeiro verdadeiro Building OS brasileiro, incluindo:</p>
+                        <ul>
+                            <li><strong>Digital Twins:</strong> Réplica virtual completa de cada edificação</li>
+                            <li><strong>AR para Manutenção:</strong> Sobreposição de informações para técnicos</li>
+                            <li><strong>Robotização Básica:</strong> Drones de inspeção e robots para tarefas simples</li>
+                            <li><strong>Certificação Verde:</strong> Framework próprio para sustentabilidade</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="metric-boxes">
+                        <div class="metric-box">
+                            <div class="metric-number">LTV:CAC</div>
+                            <div class="metric-label">5:1 meta para sustentabilidade</div>
+                        </div>
+                        
+                        <div class="metric-box">
+                            <div class="metric-number">20%+</div>
+                            <div class="metric-label">Crescimento orgânico mensal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Pilares de Experiência - Inspirados pela Loggi</h2>
+            <div class="two-column">
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon">A</div>
+                        <div>
+                            <h3>Comunicação 2.0</h3>
+                            <p>Conteúdo didático com microcopy claro, vídeos curtos e ilustrações para reduzir fricção de adoção em novas features</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon">B</div>
+                        <div>
+                            <h3>Governança de Conteúdo</h3>
+                            <p>Processo estruturado para atualização de FAQs, notificações e materiais educativos baseado em métricas de uso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div>DL Projetos e Construções</div>
+                <div>Confidencial</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
